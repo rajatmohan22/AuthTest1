@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport.js Authentication</title>
+</head>
+<body>
+    <h1>Passport.js Authentication</h1>
+
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="Username" required><br>
+            <input type="password" id="login-password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="dashboard-container" style="display: none;">
+        <h2>Welcome, <span id="user-username"></span>!</h2>
+        <button id="logout-button">Logout</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
