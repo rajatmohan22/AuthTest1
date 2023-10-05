@@ -73,15 +73,18 @@ app.get('/dashboard', isAuthenticated, (req, res) => {
 });
 
 app.get('/logout', (req, res) => {
-    console.log(req.session)
-    req.logout((err) => {
-        if (err) {
-          next(err);
-          return;
-        }
-    })
-    res.json({ success: true });
-  // res.redirect('/');
+  req.session.destroy((err) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    req.logout((error) => {
+      if (error) {
+        next(error);
+        return;
+      }
+
+  })})
 });
 
 // Middleware to check if the user is authenticated
