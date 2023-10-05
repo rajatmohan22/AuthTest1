@@ -80,7 +80,8 @@ app.get('/logout', (req, res) => {
           return;
         }
     })
-  res.redirect('/');
+    res.json({ success: true });
+  // res.redirect('/');
 });
 
 // Middleware to check if the user is authenticated
